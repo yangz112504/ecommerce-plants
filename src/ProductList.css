@@ -140,10 +140,15 @@ body {
     text-decoration: none;
 }
 .tag {
-    width: 400px;
+    width: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.tag:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
 }
 
 .tag img {
@@ -157,13 +162,21 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 650px;
     font-size: 19px;
+}
+.luxury img {
+    margin-right: 8px;
 }
 .cart{
     color: white;
     display: flex;
 }
+.cart:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+}
+
 .cart_quantity_count{
     margin-top: 16px;
     /* background-color: red; */
@@ -185,9 +198,16 @@ body {
     border: 1px solid rgb(5, 4, 4);
     border-left: none;
     border-right: none;
-
-    
 }
+
+.plantsStyle {
+    text-decoration: none;
+
+}
+.plantsStyle:hover {
+    text-decoration: underline;
+}
+
 /* Add Media Query for responsiveness */
 @media (max-width: 768px) {
     .product-card {
