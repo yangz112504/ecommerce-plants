@@ -7,7 +7,6 @@ import { useSelector, useDispatch } from 'react-redux';
 
 function ProductList() {
     const [showCart, setShowCart] = useState(false); 
-    const [addedToCart, setAddedToCart] = useState({});
     const cartItems = useSelector(state => state.cart.items);
 
     const dispatch = useDispatch();
@@ -251,7 +250,6 @@ function ProductList() {
     };
     const handleAddToCart = (product) => {
         dispatch(addItem(product))
-        setAddedToCart((prevState) => ({...prevState,[product.name]: true}));
     }
     const [totalItems, setTotalItems] = useState(0);
     
